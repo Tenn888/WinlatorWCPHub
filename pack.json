@@ -1,5 +1,17 @@
 [
   {
+    "type": "Box64",
+    "verName": "0.4.2",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/Tenn888/WinlatorWCPHub/releases/download/BOX64-BIONIC/box64-bionic-0.4.2.wcp"
+  },
+  {
+    "type": "Box64",
+    "verName": "0.4.3-260701-90dffce",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/Tenn888/WinlatorWCPHub/releases/download/BOX64-BIONIC-NIGHTLY/box64-bionic-0.4.3-260701-90dffce.wcp"
+  },
+  {
     "type": "FEXCore",
     "verName": "2605",
     "verCode": "0",
