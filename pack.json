@@ -10,5 +10,17 @@
     "verName": "2605-260701-16f90b3",
     "verCode": "0",
     "remoteUrl": "https://github.com/Tenn888/WinlatorWCPHub/releases/download/FEXCore-Nightly/FEXCore-2605-260701-16f90b3.wcp"
+  },
+  {
+    "type": "WOWBox64",
+    "verName": "0.4.2",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/Tenn888/WinlatorWCPHub/releases/download/WOWBOX64/wowbox64-0.4.2.wcp"
+  },
+  {
+    "type": "WOWBox64",
+    "verName": "0.4.3-260701-90dffce",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/Tenn888/WinlatorWCPHub/releases/download/WOWBOX64-NIGHTLY/wowbox64-0.4.3-260701-90dffce.wcp"
   }
 ]
