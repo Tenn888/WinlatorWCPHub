@@ -6,6 +6,12 @@
     "remoteUrl": "https://github.com/Tenn888/WinlatorWCPHub/releases/download/DXVK-SAREK-ASYNC-ARM64EC/dxvk-sarek-dyasync-arm64ec-1.12.0.wcp"
   },
   {
+    "type": "DXVK",
+    "verName": "3.0-1-gplasync",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/Tenn888/WinlatorWCPHub/releases/download/DXVK-GPLASYNC/dxvk-gplasync-3.0-1.wcp"
+  },
+  {
     "type": "FEXCore",
     "verName": "2605",
     "verCode": "0",
