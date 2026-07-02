@@ -16,7 +16,7 @@ on:
         description: "Force build v2.4.1-1 pre-reg only"
 
   schedule:
-    - cron: "0 17 * * *"
+    - cron: "0 21 * * *"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
