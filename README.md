@@ -6,15 +6,6 @@
 
 ---
 
-> [!NOTE]
-> 2026/06/27
-> - Assets have been refreshed.
-> - binsem assets have been added.
-> - [**Proton 11 Beta 5**](https://github.com/Arihany/WinlatorWCPHub/releases/tag/WINE) with several bug fixes. Updates will be irregular.
-> - ARM64EC (and Fexcore) assets now use Valve-style build flags for better performance, though compatibility may be reduced.
-> - `FEX Nightly` and `Box64` are no longer maintained because they are no longer part of my regular testing path.
-
-
 > [!TIP]
 > <details>
 >  <summary><b>What does this hub do?</b></summary><br>
@@ -53,13 +44,13 @@
 
 ---
 
-### 🌀 FEXCore
+### 🌀 FEXCore & Box64
 
 | Type | 📦 | 🏷️ | 📜 |
 |:-:|:-:|:-:|:-:|
-| FEXCore | [**`Stable`**](https://github.com/Arihany/WinlatorWCPHub/releases/tag/FEXCore) | <!--fex--> `2605`|<a href="https://github.com/FEX-Emu/FEX/releases">🔗</a> |
-
-</details>
+| FEXCore | [**`Stable`**](https://github.com/Tenn888/WinlatorWCPHub/releases/tag/FEXCore) [**`Nightly`**](https://github.com/Tenn888/WinlatorWCPHub/releases/tag/FEXCore-Nightly) | <!--fex--> `2605`|<a href="https://github.com/FEX-Emu/FEX/releases">🔗</a> |
+| Box64-Bionic | [**`Stable`**](https://github.com/Tenn888/WinlatorWCPHub/releases/tag/BOX64-BIONIC) [**`Nightly`**](https://github.com/Tenn888/WinlatorWCPHub/releases/tag/BOX64-BIONIC-NIGHTLY) | <!--box64--> `0.4.2` `0.4.3`| <a href="https://github.com/ptitSeb/box64/releases">🔗</a> |
+| WOWBox64 | [**`Stable`**](https://github.com/Tenn888/WinlatorWCPHub/releases/tag/WOWBOX64) [**`Nightly`**](https://github.com/Tenn888/WinlatorWCPHub/releases/tag/WOWBOX64-NIGHTLY) | <!--box64--> `0.4.2` `0.4.3`| <a href="https://github.com/ptitSeb/box86/releases">🔗</a> |
 
 ---
 
@@ -116,7 +107,6 @@ DXVK-Sarek [pythonlover02](https://github.com/pythonlover02)<br>
 DXVK-GPLAsync Patch [Ph42oN](https://gitlab.com/Ph42oN)<br>
 DXVK-Binary Semaphore DxvkQueue fallback Patch [Lee Gao](https://github.com/leegao)<br>
 VKD3D [Hans-Kristian Arntzen](https://github.com/HansKristian-Work)<br>
-Freedreno Turnip driver [Mesa](https://mesa3d.org/)
 
 </h4>
 
