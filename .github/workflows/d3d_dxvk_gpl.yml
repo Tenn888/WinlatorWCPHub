@@ -12,7 +12,7 @@ on:
         description: "(e.g. 2.4.1-1-pre-reg, 2.4.1, 2.7.1-1, latest). Empty = presets + latest"
 
   schedule:
-    - cron: "0 17 * * *"
+    - cron: "0 21 * * *"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
