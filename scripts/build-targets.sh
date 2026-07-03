@@ -76,7 +76,7 @@ normalize_github_version_ref() {
   local raw="$2"
 
   case "$kind" in
-    dxvk|dxvk-arm64ec|dxvk-sarek-dyasync*|vkd3d-proton*)
+    dxvk|dxvk-arm64ec|dxvk-sarek-dyasync*|vkd3d-proton*|box64*|wowbox*)
       if [[ "$raw" =~ ^[0-9] ]]; then
         printf 'v%s\n' "$raw"
       else

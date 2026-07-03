@@ -136,7 +136,7 @@ get_tag_regex_for_kind() {
     fexcore)
       printf '%s\t%s\n' '^FEX-[0-9]+' '^FEX-'
       ;;
-    dxvk*|vkd3d*)
+    dxvk*|vkd3d*|box64*|wowbox*)
       printf '%s\t%s\n' '^(v)?[0-9]' ''
       ;;
     *)
@@ -238,7 +238,7 @@ resolve_standard_strategy() {
       filename="FEXCore-${ver_name}.wcp"
       ;;
 
-    dxvk*|vkd3d*)
+    dxvk*|vkd3d*|box64*|wowbox*)
       [[ "$channel" == "nightly" ]] && { echo "::error::Nightly not supported for $strategy" >&2; return 1; }
       [[ -z "$input_arg" ]] && return 1
       

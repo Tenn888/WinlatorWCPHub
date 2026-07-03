@@ -7,7 +7,7 @@ on:
         type: choice
         description: "auto=stable+nightly, stable=tag, nightly=HEAD"
         options: [auto, stable, nightly]
-        default: nightly
+        default: auto
       host:
         type: boolean
         default: false
