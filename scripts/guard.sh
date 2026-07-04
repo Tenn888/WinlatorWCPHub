@@ -230,27 +230,59 @@ resolve_standard_strategy() {
 
   case "$strategy" in
     fexcore)
-      # FEX is stable-only (nightly dropped).
-      [[ "$channel" == "stable" ]] || { echo "::error::Nightly not supported for $strategy" >&2; return 1; }
-      [[ -z "$input_arg" ]] && return 1
-      ref="$input_arg"
-      ver_name="${input_arg#FEX-}"
-      filename="FEXCore-${ver_name}.wcp"
+      # FEX: support both stable and nightly. For nightly, use upstream HEAD SHA
+      # and include the latest stable base + datecode + short SHA in filename.
+      if [[ "$channel" == "stable" ]]; then
+        [[ -z "$input_arg" ]] && return 1
+        ref="$input_arg"
+        ver_name="${input_arg#FEX-}"
+        filename="FEXCore-${ver_name}.wcp"
+      elif [[ "$channel" == "nightly" ]]; then
+        local base_tag base_ver sha short
+        base_tag="$(get_latest_stable fexcore)"
+        base_ver="${base_tag#FEX-}"
+        sha="$(get_upstream_head_sha)"
+        short="${sha:0:7}"
+        ref="$sha"
+        ver_name="${base_ver}-${dc}-${short}"
+        filename="FEXCore-${ver_name}.wcp"
+      else
+        echo "::error::Unsupported channel '$channel' for $strategy" >&2
+        return 1
+      fi
       ;;
 
     dxvk*|vkd3d*|box64*|wowbox*)
-      [[ "$channel" == "nightly" ]] && { echo "::error::Nightly not supported for $strategy" >&2; return 1; }
-      [[ -z "$input_arg" ]] && return 1
-      
-      ref="$input_arg"
-      local base
-      base="$(version_base_from_ref "$ref")"
+      # Allow nightly only for box64/wowbox variants; dxvk/vkd3d remain stable-only here
+      if [[ "$channel" == "nightly" ]]; then
+        if [[ "$strategy" == box64* || "$strategy" == wowbox* ]]; then
+          # For box64/wowbox nightly: use upstream HEAD SHA and base stable tag + datecode
+          local base_tag base_ver sha short
+          base_tag="$(get_latest_stable "$strategy")"
+          base_ver="${base_tag##v}"
+          sha="$(get_upstream_head_sha)"
+          short="${sha:0:7}"
+          ref="$sha"
+          ver_name="${base_ver}-${dc}-${short}"
+          local prefix="$strategy"
+          [[ "$prefix" != *- ]] && prefix="${prefix}-"
+          filename="${prefix}${ver_name}.wcp"
+        else
+          echo "::error::Nightly not supported for $strategy" >&2
+          return 1
+        fi
+      else
+        [[ -z "$input_arg" ]] && return 1
+        ref="$input_arg"
+        local base
+        base="$(version_base_from_ref "$ref")"
 
-      local prefix="$strategy"
-      [[ "$prefix" != *- ]] && prefix="${prefix}-"
-      
-      ver_name="$base"
-      filename="${prefix}${base}.wcp"
+        local prefix="$strategy"
+        [[ "$prefix" != *- ]] && prefix="${prefix}-"
+
+        ver_name="$base"
+        filename="${prefix}${base}.wcp"
+      fi
       ;;
       
     *)
