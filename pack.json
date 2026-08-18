@@ -156,6 +156,12 @@
     "remoteUrl": "https://github.com/Tenn888/WinlatorWCPHub/releases/download/FEXCore-Nightly/FEXCore-2608-260817-9618b5a.wcp"
   },
   {
+    "type": "FEXCore",
+    "verName": "2608-260818-c3b4d4b",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/Tenn888/WinlatorWCPHub/releases/download/FEXCore-Nightly/FEXCore-2608-260818-c3b4d4b.wcp"
+  },
+  {
     "type": "VKD3D",
     "verName": "2.14.1",
     "verCode": "0",
