@@ -13,6 +13,12 @@
   },
   {
     "type": "DXVK",
+    "verName": "1.13.0-dyasync-arm64ec",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/Tenn888/WinlatorWCPHub/releases/download/DXVK-SAREK-ASYNC-ARM64EC/dxvk-sarek-dyasync-arm64ec-1.13.0.wcp"
+  },
+  {
+    "type": "DXVK",
     "verName": "2.4.1-1-gplasync",
     "verCode": "0",
     "remoteUrl": "https://github.com/Tenn888/WinlatorWCPHub/releases/download/DXVK-GPLASYNC/dxvk-gplasync-2.4.1-1.wcp"
@@ -154,6 +160,12 @@
     "verName": "2608-260823-af9b438",
     "verCode": "0",
     "remoteUrl": "https://github.com/Tenn888/WinlatorWCPHub/releases/download/FEXCore-Nightly/FEXCore-2608-260823-af9b438.wcp"
+  },
+  {
+    "type": "FEXCore",
+    "verName": "2608-260824-f0b4501",
+    "verCode": "0",
+    "remoteUrl": "https://github.com/Tenn888/WinlatorWCPHub/releases/download/FEXCore-Nightly/FEXCore-2608-260824-f0b4501.wcp"
   },
   {
     "type": "VKD3D",
